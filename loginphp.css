@@ -1,0 +1,30 @@
+#text{
+    height: 25px;
+    border-radius: 5px;
+    padding: 4px;
+    border: solid thin #aaa;
+    width: 100%;
+}
+#box{
+    background-color: #292929;
+    margin: auto;
+    width: 300px;
+    padding: 20px;
+}
+#button {
+    font-family: 'Mulish', sans-serif;
+    font-size: 1rem;
+    padding: 0.8rem 3rem;
+    background: #4A4A4A;
+    border-radius: 35px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    border: none;
+    transition: all ease .5s;
+}
+#button:hover {
+    background: #616161;
+    color: #EBEBEB;
+    border-radius: 22px;
+}
