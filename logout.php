@@ -8,5 +8,5 @@ if(isset($_SESSION['user_id']))
 
 }
 
-header("Location: index.html");
+header("Location: indexmain.html");
 die;

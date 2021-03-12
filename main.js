@@ -16,5 +16,8 @@ function topFunction() {
 }
 
 function reDirect() {
-  location.href = 'http://blackmarket/login.php';
+  location.href = 'login.php';
+}
+function exitF() {
+  location.href = 'indexmain.html';
 }

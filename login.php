@@ -33,10 +33,10 @@ session_start();
 				}
 			}
 			
-			echo "Wrong username or password!";
+			echo "<div class=\"wrong\">Wrong username or password!</div>";
 		}else
 		{
-			echo "Wrong username or password!";
+			echo "<div class=\"wrong\">Wrong username or password!</div>";
 		}
 	}
 
@@ -49,7 +49,7 @@ session_start();
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="loginphp.css">
-    <title>Black market</title>
+    <title>Blackmarket Login</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Mulish:ital,wght@1,300&display=swap" rel="stylesheet">
@@ -61,7 +61,7 @@ session_start();
             background-color: #292929;
         }
         #text{
-            height: 25px;
+            height: 25px; 
             border-radius: 10px;
             padding: 4px;
             border: solid thin #aaa;
@@ -74,6 +74,7 @@ session_start();
             border-radius: 25px;
             margin-top: 300px;
             padding: 20px;
+            animation: Slide 2s ease;
         }
         #button {
             font-family: 'Mulish', sans-serif;
@@ -89,7 +90,7 @@ session_start();
             transition: all ease .5s;
         }
         #button:hover {
-            background: #616161;
+            background: #313131;
             color: #EBEBEB;
             border-radius: 22px;
         }
@@ -107,7 +108,7 @@ session_start();
             transition: all ease .5s;
         }
         #signup:hover {
-            background: #616161;
+            background: #313131;
             color: #EBEBEB;
             border-radius: 22px;
         }
@@ -117,8 +118,62 @@ session_start();
             color: white;
             text-align: center;
             font-family: 'Lexend Deca', sans-serif;
+            cursor: default;
+        }
+        .wrong {
+            margin-top: 5px;
+            padding: 5px;
+            color: white;
+            font-family: 'Lexend Deca', sans-serif;
+            text-align: center;
+            font-size: 22px;
+            position: absolute;
+            top: 200px;
+            left: 760px;
+            padding: 15px;
+            background: #4A4A4A;
+            border-radius: 35px;
+            cursor: default;
+        }
+        @keyframes Slide {
+        0% {
+            transform: translateY(250px);
+            opacity: 30%;
+        }
+        50% {
+            opacity: 60%;
+        }
+        75% {
+            opacity: 85%;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 100%;
+        }    
+        }
+        #Btn {
+            width: 55px;
+            height: 55px;
+            position: fixed;
+            left: 900px;
+            top: 125px;
+            z-index: 99;
+            border-radius: 50%;
+            border: none;
+            outline: none;
+            background: #7F7F7F;
+            color: white;
+            cursor: pointer;
+            padding: 15px; 
+            font-size: 20px;
+        }
+        #Btn:hover {
+            background-color: #ADADAD;
         }
     </style>
+        <button onclick="exitF()" id="Btn">
+            <i class="material-icons">close</i>
+        </button>
 	<div id="box">
 		<form method="post">
 			<div id="font">Login</div>
@@ -131,5 +186,6 @@ session_start();
 			<a id="signup" href="signup.php">Click to Signup</a><br><br>
 		</form>
 	</div>
+    <script src="main.js"></script>
 </body>
 </html>
